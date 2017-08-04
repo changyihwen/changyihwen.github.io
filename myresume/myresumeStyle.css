@@ -1,6 +1,9 @@
 .noBreak{ white-space:nowrap; }
+.linkedIn { opacity: .3; margin-left:20px; }
+.linkedIn:hover { opacity: .7 }
 
-body{
+body,
+main h1{
 	margin:0;
 }
 main{
@@ -10,6 +13,7 @@ main{
 	padding:2em 1em;
 	font-family:Times;
 }
+
 main img{
 	display:block; margin:0 auto 1.5em;
 }
@@ -45,13 +49,13 @@ section article{
 	margin:2em 0 3em;
 }
 
-.Quali table{
+.QUALIFICATION table{
 	width:100%;	
 }
-.Quali table td{
+.QUALIFICATION table td{
 	padding:.7em 0;
 }
-.Quali table td:nth-child(2){
+.QUALIFICATION table td:nth-child(2){
 	padding:0 .5em
 }
 

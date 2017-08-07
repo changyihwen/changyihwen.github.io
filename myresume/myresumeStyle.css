@@ -1,6 +1,13 @@
 .noBreak{ white-space:nowrap; }
-.linkedIn { opacity: .3; margin-left:20px; }
+.linkedIn { opacity: .3; margin-left:20px;margin-top:5px; }
 .linkedIn:hover { opacity: .7 }
+
+body{
+	font-size: 18px;	
+}
+h1{
+	font-size: 2em;
+}
 
 body,
 main h1{
@@ -30,9 +37,6 @@ main li{
 section{
 	margin-bottom:4em;
 }
-section:last-child{
-	margin-bottom:1em;
-}
 section h2{
 	text-align:center; background-color:#444; padding:.2em 0; 
 }
@@ -40,15 +44,19 @@ section h2 span{
 	color:white;
 }
 section hr{
-	border-style:dotted; margin-bottom:3em;
+	border-style:dotted; margin:2em 0 3em;
 }
 section > .SectLine{
 	display:none;
 }
 section article{
 	margin:2em 0 3em;
+	/*display:none;*/
 }
 
+.QUALIFICATION{
+	margin-top:6em;
+}
 .QUALIFICATION table{
 	width:100%;	
 }
@@ -59,9 +67,11 @@ section article{
 	padding:0 .5em
 }
 
+
 @media screen and (min-width:500px){
 	body{
 		margin:.5em;
+		font-size: 16px;
 	}
 	main{
 		border-width:7px;

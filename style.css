@@ -1,36 +1,65 @@
+.togNav{ display:block; }
+.togMain{ display:none; }
+
+*{
+	margin:0;
+}
 body{
 	font-family:"Times";
 	line-height: 1.5em;
-	margin:0;
-	display:flex;
+	background-color:#DDD;
 	/*color:#999;*/
 }
 
 a{
 	position:absolute;
 	z-index:10;
+	padding:1em 1em;
 }
+
 nav{
 	background-color:#EEE;
-	height:100vh;
-	width:25vw;
-	min-width:150px;
-	display:flex;
+	display:none;
+	padding:4em 1em;
+	height:calc(100vh - 8em);
 }
+
 main{
-	background-color:#DDD;
-	height:100vh;
-	width:100vw;
-	display:flex;
+	/*position:absolute;*/
+	
+	padding:4em 1em;
+	height:calc(100vh - 8em);
+	width:calc(100vw - 2em)
+	/*padding:3em 1em;*/
+	/*margin-left:0;*/
+	/*display:flex;*/
+	/*transition: width .7s ease, margin-left .7s ease;*/
 }
+/*main:hover{
+		width:calc(100vw - 25vw);
+		margin-left:25vw;
+	}*/
 section{
 	/*background-color:#CCC;*/
-	margin:1em;
-	width:100%;
+	/*margin:1em;*/
 	/*text-align:center;
 	padding-top:50vh;*/
 }
-section *{
-	/*border:1px solid red;*/
-	margin:0;
+
+@media screen and (min-width:500px){
+	.togNav{ margin-left:0; }
+	.togMain{ display:block; }
+
+	body{
+		display:flex;
+	}
+	nav{
+		background-color:#EEE;
+		height:calc(100vh - 8em);
+		min-width:150px;
+		padding:4em 1em;
+		margin-left:calc(-150px - 2em);
+		transition:margin-left .7s ease;
+		display:block;
+	}
 }

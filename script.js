@@ -1,3 +1,5 @@
 function nav(){
-	$('nav').hide();
+	//alert('rgt');
+	$('nav').toggleClass('togNav');
+	$('main').toggleClass('togMain');
 }

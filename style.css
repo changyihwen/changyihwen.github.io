@@ -11,10 +11,11 @@ body{
 	/*color:#999;*/
 }
 
-a{
+body .Menu{
 	position:absolute;
 	z-index:10;
 	padding:1em 1em;
+	cursor:pointer;
 }
 
 nav{
@@ -22,6 +23,11 @@ nav{
 	display:none;
 	padding:4em 1em;
 	height:calc(100vh - 8em);
+	/*transition: opacity 1s;*/
+}
+nav li{
+	list-style: none;
+	cursor:pointer;
 }
 
 main{
@@ -34,16 +40,6 @@ main{
 	/*margin-left:0;*/
 	/*display:flex;*/
 	/*transition: width .7s ease, margin-left .7s ease;*/
-}
-/*main:hover{
-		width:calc(100vw - 25vw);
-		margin-left:25vw;
-	}*/
-section{
-	/*background-color:#CCC;*/
-	/*margin:1em;*/
-	/*text-align:center;
-	padding-top:50vh;*/
 }
 
 @media screen and (min-width:500px){
@@ -59,7 +55,7 @@ section{
 		min-width:150px;
 		padding:4em 1em;
 		margin-left:calc(-150px - 2em);
-		transition:margin-left .7s ease;
+		transition:margin-left .5s ease;
 		display:block;
 	}
 }

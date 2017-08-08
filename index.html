@@ -4,13 +4,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1; user-scalable=no;">
 	<title>YW Page</title>
 	<link rel="stylesheet" href="style.css">
+	<!-- <link rel="stylesheet" href="myresume/myresumeStyle.css"> -->
 	<script src="jquery-2.2.3.min.js"></script>
 	
 </head>
 <body>
-	<p><strong><a href="javascript:" onclick="nav()">&#9776; Menu</a></strong></p>
-	<nav class="navi">
-		<section>Navigation</section>
+	<!-- <button>Menu</button> -->
+	<h4 class="Menu" onclick="showNav()"><strong>&#9776; Menu</strong></h4>
+	<nav>
+		<ul>
+			<li>Illustrations</li>
+			<li onclick="showResume()" href="dodo">My Resume</li>
+		</ul>
 	</nav>
 	<main>
 		<section>
@@ -19,4 +24,5 @@
 	</main>	
 </body>
 <script src="script.js"></script>
+
 </html>

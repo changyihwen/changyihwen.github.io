@@ -1,1 +1,1 @@
- <a href="www.google.com">Link 1</a>
+ <a href="https://www.google.com.sg">Link 1</a>

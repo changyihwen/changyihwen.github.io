@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1; user-scalable=no;">
+	<title>YW Page</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.hideITEM { display:none; }
+		textarea {display:block; margin-bottom:1em; max-width:95%; resize:horizontal; font-size:1.2em;}
+	</style>
+	<!-- <link rel="stylesheet" href="myresume/myresumeStyle.css"> -->
+	<script src="../jquery-2.2.3.min.js"></script>
+	
+</head>
+<body>
+	<h1>Quiz .txt file Generator</h1><br>
+	<div id="numOfQnHolder">
+		<p>How many questions does this quiz have? (between 1 to 20)</p>
+		<input type="range" id="myRange" max="20" min="1">
+		<input type="number" min="1" max="20" id="numOfQn"/>
+		<input type="button" value="SUBMIT" id="btnSUBMIT"/>
+	</div>
+	<!-- <textarea id="note_Textarea"></textarea> -->
+	<div class="qnSet">
+		<div id="qnSet0">
+			<textarea name="Qn" placeholder="Question 1" rows="5" cols="100"></textarea>
+			<textarea placeholder="Option A" cols="70" rows="4"></textarea>
+			<textarea placeholder="Option B" cols="70" rows="4"></textarea>
+			<textarea placeholder="Option C" cols="70" rows="4"></textarea>
+			<textarea placeholder="Option D" cols="70" rows="4"></textarea>
+			<br><br><br><br>
+		</div>
+	</div>
+	<button id="btnEXPORT">EXPORT</button>
+</body>
+<script>
+
+init();
+
+document.getElementById('btnSUBMIT').onclick = function() {
+	alert(document.getElementById("myRange").value);
+	var numOfQn = document.getElementById('numOfQnHolder').children[1].value;
+	if(numOfQn > 20){
+		alert('Too many questions!!')
+	}else{
+	//alert(numOfQn)
+		populate(numOfQn);
+	}
+}
+
+
+function init(){
+	document.getElementsByClassName('qnSet')[0].classList.add('hideITEM');
+	document.getElementById('btnEXPORT').classList.add('hideITEM');
+}
+
+function populate(value){
+	document.getElementById('numOfQnHolder').classList.add('hideITEM');	
+	document.getElementsByClassName('qnSet')[0].classList.remove('hideITEM');
+	document.getElementById('btnEXPORT').classList.remove('hideITEM');
+
+	var i=0;	
+	for(var x=1; x<value; x++){
+		var original = document.getElementById('qnSet'+i);
+		var clone = original.cloneNode(true); // "deep" clone
+	    clone.id = "qnSet" + ++i; // there can only be one element with an ID
+	    //clone.onclick = duplicate; // event handlers are not cloned
+	    original.parentNode.appendChild(clone);
+	    document.getElementsByName('Qn')[i].placeholder="Question "+(i+1);
+	}
+
+	/*function duplicate() {
+		var original = document.getElementById('qnSet'+i);
+		var clone = original.cloneNode(true); // "deep" clone
+	    clone.id = "qnSet" + ++i; // there can only be one element with an ID
+	    //clone.onclick = duplicate; // event handlers are not cloned
+	    original.parentNode.appendChild(clone);
+	    document.getElementsByName('Qn')[i].placeholder="Question "+(i+1);
+	}*/
+}
+
+
+
+
+document.getElementById('btnEXPORT').onclick = function() {
+	//"use strict";
+	//alert(document.getElementById('note_Textarea').innerHTML)
+  if ('Blob' in window) {
+	var fileName = prompt('Please enter file name to save', 'Untitled');
+	if (fileName) {
+	  //var textToWrite = document.getElementById('note_Textarea').value.replace(/\n/g, '\r\n');
+	  //var textToWrite = document.getElementById('note_Textarea').innerText.replace(/([^\r])\n/g, "$1\r\n");
+	  var textToWrite = document.getElementById('note_Textarea').children[0].value.replace(/\n/g, '\r\n');
+	 // textToWrite = textToWrite.replace(/\n/g, '\r\n') + document.getElementById('note_Textarea').children[1].value;
+	  alert(textToWrite)
+
+	  	 //document.getElementById('note_Textarea').children[1].value
+	  
+	  var textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
+	  // Internet Explorer allows file to be saved
+	  if ('msSaveOrOpenBlob' in navigator) {
+		navigator.msSaveOrOpenBlob(textFileAsBlob, fileName);
+	  } else {
+		var downloadLink = document.createElement('a');
+		downloadLink.download = fileName+'.txt';
+		downloadLink.innerHTML = 'Download File';
+		if ('webkitURL' in window) {
+		  // Chrome allows the link to be clicked without actually adding it to the DOM.
+		  downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+		} else {
+		  // Firefox requires the link to be added to the DOM before it can be clicked.
+		  downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+		  downloadLink.onclick = destroyClickedElement;
+		  downloadLink.style.display = 'none';
+		  document.body.appendChild(downloadLink);
+		}
+		downloadLink.click();
+	  }
+	}
+  } else {
+	alert('Your browser does not support the HTML5 Blob.');
+  }
+};		
+function destroyClickedElement(event) {
+	"use strict";
+	document.body.removeChild(event.target);
+}
+</script>
+
+</html>

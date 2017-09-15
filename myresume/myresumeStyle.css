@@ -86,7 +86,7 @@ section article{
 		float:right; margin:0 30px 20px; 
 	}
 	main .ME{
-		display:block; float:left; height:140px; margin-left:0;
+		display:block; float:right; height:140px; margin-left:0;
 	}
 	section h2{
 		text-align:center; background-color:transparent; padding:0;

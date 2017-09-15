@@ -1,3 +1,4 @@
-This is my page hosted on GitHub. Extremely new to this and feeling my way around. Looking forward to put up my Portfolio here.
+Welcome to this GitHub page. 
 
-<a href="myresume/myresume.html">My Resume</a>
+<a href="myportfolio/index.html">Works</a>
+<!--<a href="myresume/myresume.html">Resume</a>-->

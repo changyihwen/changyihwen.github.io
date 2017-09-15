@@ -1,0 +1,57 @@
+/*.noBreak{ white-space:nowrap; }
+.linkedIn { opacity: .3; margin-left:20px;margin-top:5px; }
+.linkedIn:hover { opacity: .7 }*/
+
+body{
+	margin:0;
+	font-size: 16px;
+	background-color:#dcf1f7;
+	font-family:"Trebuchet MS", sans-serif;
+	display:flex;
+}
+body>section{
+	height:100vh;
+}
+
+.header		{	color:white;	}
+.header_Dark{	color:#333;		}
+
+.aboutMe{
+	background-color:#333;
+	max-width:350px;
+	min-width:260px;
+	width:25%;
+	color:lightgrey;
+}
+.myPhoto{
+	background: url("img/placeholder.png") no-repeat;
+	background-size:contain;
+	height:40vh;
+	background-color:white;
+	position:relative;
+}
+.myPhoto>span{
+	position:absolute; bottom:0; width:100%;
+	background:linear-gradient(-168deg,rgba(255, 255, 255,0) 48%,rgba(51, 51, 51,1) 52%);
+}
+.myPhoto>span>h1{
+	margin:4em .5em 0 .5em; font-size:1.9em;
+}
+
+.myParticulars,.mySkills{
+	padding:1em;
+}
+
+
+.aboutJourney{
+	width:100vw; margin:0 3em; max-width:900px;
+}
+.Organization{
+	background-color:white; border-radius:1em; padding:1.5em; display:flex;
+}
+.Organization div:first-child{
+	width:30%; padding-right:1.5em; border-right:1px solid grey;
+}
+.Organization div:last-child{
+	padding-left:1.5em;
+}

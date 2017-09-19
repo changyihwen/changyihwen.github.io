@@ -1,31 +1,27 @@
-/*.noBreak{ white-space:nowrap; }
-.linkedIn { opacity: .3; margin-left:20px;margin-top:5px; }
+.noBreak{ white-space:nowrap; }
+/*.linkedIn { opacity: .3; margin-left:20px;margin-top:5px; }
 .linkedIn:hover { opacity: .7 }*/
 
 body{
 	margin:0;
 	font-size: 16px;
-	background-color:#dcf1f7;
+	background:linear-gradient(125deg,#dcf1f7 25%,#99ddef);
 	font-family:"Trebuchet MS", sans-serif;
-	display:flex;
-}
-body>section{
-	height:100vh;
 }
 
-.header		{	color:white;	}
-.header_Dark{	color:#333;		}
+li{
+	margin-bottom:.8em;
+}
+.header		{ color:white; }
+.header_Dark{ margin-top:.85em; color:#0383a5; }
 
 .aboutMe{
 	background-color:#333;
-	max-width:350px;
-	min-width:260px;
-	width:25%;
 	color:lightgrey;
 }
 .myPhoto{
-	background: url("img/placeholder.png") no-repeat;
-	background-size:contain;
+	background: url("img/me.jpg") no-repeat;
+	background-size:100%;
 	height:40vh;
 	background-color:white;
 	position:relative;
@@ -38,20 +34,39 @@ body>section{
 	margin:4em .5em 0 .5em; font-size:1.9em;
 }
 
-.myParticulars,.mySkills{
-	padding:1em;
-}
+
+.myParticulars a{ color:#cfeef7; }
+.myParticulars,.mySkills{ padding:.5em 1em; }
+
+.mySkills p{ display:inline-flex; min-width:100px; margin:0 0 1em 0; border:1px solid grey; padding:.2em; }
 
 
-.aboutJourney{
-	width:100vw; margin:0 3em; max-width:900px;
+.aboutJourney{ margin:0 1em; }
+.Organization,
+.Institute{
+	background:linear-gradient(white,#fcfcfc); border-radius:1em; padding:1.5em; margin-bottom:1em; border:5px solid #EFEFEF;
 }
-.Organization{
-	background-color:white; border-radius:1em; padding:1.5em; display:flex;
-}
-.Organization div:first-child{
-	width:30%; padding-right:1.5em; border-right:1px solid grey;
-}
+.Organization div:first-child p{ margin:0 2.5em 0 0; }
+.Organization .jobTitle{ font-weight:bold; font-size:1.2em; }
 .Organization div:last-child{
-	padding-left:1.5em;
+	/*padding-left:1.5em; display:none;*/ border-top:1px solid grey; margin-top:1.5em;
+}
+
+.myEducation h4,
+.myEducation p{ margin:0; }
+
+.myEducation p{ margin:.2em 0 0 0; }
+
+.Institute		{ display:flex; }
+.Institute h3	{ text-align:center; border-right:1px solid grey; margin:0 1em 0 0; padding-right:1em; }
+
+@media screen and (min-width:500px){
+	body 		{ display:flex;	}
+	body>section{ min-height:100vh; }
+
+	.aboutMe	{ max-width:350px; min-width:260px; width:25%; }
+	.mySkills p { display:block }
+
+	.aboutJourney	{ margin:0 3em; width:100vw; max-width:900px; }
+	.header_Dark	{ margin-top:initial; }
 }

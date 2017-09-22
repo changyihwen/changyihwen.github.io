@@ -2,30 +2,14 @@
 /*.linkedIn { opacity: .3; margin-left:20px;margin-top:5px; }
 .linkedIn:hover { opacity: .7 }*/
 
-body{
-	margin:0;
-	font-size: 16px;
-	background:linear-gradient(125deg,#dcf1f7 25%,#99ddef);
-	font-family:"Trebuchet MS", sans-serif;
-}
+body{ margin:0;	font-size: 16px; background:linear-gradient(125deg,#dcf1f7 25%,#99ddef); font-family:"Trebuchet MS", sans-serif; }
+li{	margin-bottom:1.5em; }
 
-li{
-	margin-bottom:.8em;
-}
 .header		{ color:white; }
-.header_Dark{ margin-top:.85em; color:#0383a5; }
+.header_Dark{ margin-top:1.5em; color:#0383a5; }
 
-.aboutMe{
-	background-color:#333;
-	color:lightgrey;
-}
-.myPhoto{
-	background: url("img/ME.jpg") no-repeat;
-	background-size:100%;
-	height:40vh;
-	background-color:white;
-	position:relative;
-}
+.aboutMe{ background-color:#333; color:lightgrey; }
+.myPhoto{ background: url("img/ME.jpg") no-repeat; background-size:100%; height:40vh;	background-color:white; position:relative; }
 .myPhoto>span{
 	position:absolute; bottom:0; width:100%;
 	background:linear-gradient(-168deg,rgba(255, 255, 255,0) 48%,rgba(51, 51, 51,1) 52%);
@@ -34,39 +18,43 @@ li{
 	margin:4em .5em 0 .5em; font-size:1.9em;
 }
 
+.myParticulars,.mySkills{ padding:.5em 1em; display:flex; flex-wrap:wrap; }
 
-.myParticulars a{ color:#cfeef7; }
-.myParticulars,.mySkills{ padding:.5em 1em; }
+.myParticulars p:first-child{ margin-right:2em; }
+.myParticulars a 			{ color:#cfeef7; }
 
-.mySkills p{ display:inline-flex; min-width:100px; margin:0 0 1em 0; border:1px solid grey; padding:.2em; }
+
+.mySkills h2{ width:100%;}
+.mySkills p{ border:1px solid grey; padding:.3em .6em; margin:0 .5em 1em 0; }
 
 
 .aboutJourney{ margin:0 1em; }
+
 .Organization,
-.Institute{
-	background:linear-gradient(white,#fcfcfc); border-radius:1em; padding:1.5em; margin-bottom:1em; border:5px solid #EFEFEF;
-}
-.Organization div:first-child p{ margin:0 2.5em 0 0; }
-.Organization .jobTitle{ font-weight:bold; font-size:1.2em; }
-.Organization div:last-child{
-	/*padding-left:1.5em; display:none;*/ border-top:1px solid grey; margin-top:1.5em;
-}
+.Institute					   { background:linear-gradient(white,#fcfcfc); border-radius:1em; margin-bottom:1em; border:5px solid #EFEFEF; box-shadow: 0px 0px 8px #888 }
+.Organization div			   { padding:1.5em; }
+.Organization div:first-child  { background:linear-gradient(#30acd1 7%,#117c9b 20%,#054254); border-radius:.75em .75em 0 0 ; }
+.Organization div:first-child p{ margin:0; color:white; }
+.Organization .jobTitle		   { font-weight:bold; font-size:1.2em; }
+.Organization div:last-child   { border-top:1px solid grey; padding-top:1em }
 
 .myEducation h4,
 .myEducation p{ margin:0; }
 
-.myEducation p{ margin:.2em 0 0 0; }
+.myEducation p{ margin-top:.2em; }
 
 .Institute		{ display:flex; }
-.Institute h3	{ text-align:center; border-right:1px solid grey; margin:0 1em 0 0; padding-right:1em; }
+.Institute h3	{ padding:1.5em 1em; text-align:center; margin:0 1em 0 0; background:linear-gradient(#246fc1 7%,#17579e 20%,#052754); color:white; border-radius:.6em 0 0 .6em; }
+.Institute h4	{ padding:1.5em 1.5em 0 0; }
+.Institute p	{ padding:0 1.5em 1.5em 0; }
 
-@media screen and (min-width:500px){
+@media screen and (min-width:550px){
 	body 		{ display:flex;	}
 	body>section{ min-height:100vh; }
 
-	.aboutMe	{ max-width:350px; min-width:260px; width:25%; }
-	.mySkills p { display:block }
+	.aboutMe	{ max-width:350px; min-width:250px; width:25%; }	
 
 	.aboutJourney	{ margin:0 3em; width:100vw; max-width:900px; }
-	.header_Dark	{ margin-top:initial; }
+
+	.header_Dark	{ margin-top:1em; }
 }

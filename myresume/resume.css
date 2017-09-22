@@ -2,7 +2,7 @@
 /*.linkedIn { opacity: .3; margin-left:20px;margin-top:5px; }
 .linkedIn:hover { opacity: .7 }*/
 
-body{ margin:0;	font-size: 16px; background:linear-gradient(125deg,#dcf1f7 25%,#99ddef); font-family:"Trebuchet MS", sans-serif; }
+body{ margin:0;	font-size: 16px; background:linear-gradient(125deg,#dcf1f7 25%,#86d9ef); font-family:"Trebuchet MS", sans-serif; }
 li{	margin-bottom:1.5em; }
 
 .header		{ color:white; }
@@ -20,7 +20,7 @@ li{	margin-bottom:1.5em; }
 
 .myParticulars,.mySkills{ padding:.5em 1em; display:flex; flex-wrap:wrap; }
 
-.myParticulars p:first-child{ margin-right:2em; }
+.myParticulars p:first-child{ margin-right:3em; }
 .myParticulars a 			{ color:#cfeef7; }
 
 

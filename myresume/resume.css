@@ -1,5 +1,5 @@
 .noBreak	{ white-space:nowrap; }
-.linkedIn 	{ opacity: .3; margin-left:.3em; }
+.linkedIn 	{ opacity:.3;  }
 .linkedIn:hover { opacity: .7;  }
 
 
@@ -9,15 +9,10 @@ li{	margin-bottom:1.5em; }
 .header		{ color:white; }
 .header_Dark{ margin-top:1.5em; color:#0383a5; }
 
-.aboutMe{ background-color:#333; color:lightgrey; }
-.myPhoto{ background: url("img/ME.jpg") no-repeat; background-size:100%; height:40vh; min-height:300px;	background-color:white; position:relative; }
-.myPhoto>span{
-	position:absolute; bottom:0; width:100%;
-	background:linear-gradient(-168deg,rgba(255, 255, 255,0) 48%,rgba(51, 51, 51,1) 52%);
-}
-.myPhoto>span>h1{
-	margin:4em .5em 0 .5em; font-size:1.9em;
-}
+.aboutMe			{ background-color:#333; color:lightgrey; }
+.myPhoto			{ background: url("img/ME.jpg") no-repeat; background-size:100%; height:40vh; min-height:300px;	display:flex; align-items:flex-end; }
+.myPhoto>.header	{ background:linear-gradient(-168deg,rgba(255, 255, 255,0) 48%,rgba(51, 51, 51,1) 52%);	width:100%; padding:4em .5em 0 .5em; font-size:1.9em; margin:0; }
+.myPhoto>.header>span { margin-right:.3em; }
 
 .myParticulars,.mySkills{ padding:.5em 1em; display:flex; flex-wrap:wrap; }
 
